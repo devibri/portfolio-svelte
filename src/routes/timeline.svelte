@@ -2,7 +2,12 @@
 	<ol class="relative border-s border-primary-700 dark:border-primary-200">
 		<li class="mb-10 ms-4">
 			<div class="absolute w-3 h-3 bg-primary-700 rounded-full mt-1.5 -start-1.5 border border-primary-700 dark:border-primary-200 dark:bg-primary-200"></div>
-			<time class="mb-1">2022 - Now</time>
+			<time class="mb-1">2025 - Now</time>
+			<h4 class="h4"><strong>Senior Data Scientist</strong>, Take-Two AI</h4>
+		</li>
+		<li class="mb-10 ms-4">
+			<div class="absolute w-3 h-3 bg-primary-700 rounded-full mt-1.5 -start-1.5 border border-primary-700 dark:border-primary-200 dark:bg-primary-200"></div>
+			<time class="mb-1">2022 - 2024</time>
 			<h4 class="h4"><strong>Senior Data Scientist</strong>, Applied AI @ Zynga</h4>
 			<p>Developed AI-based tools to support game and creative teams at Zynga</p>
 			<span><span class="badge variant-filled">Procedural Content Generation</span><span class="badge variant-filled">Storylets</span><span class="badge variant-filled">Generative AI</span></span>

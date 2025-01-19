@@ -1,6 +1,16 @@
 <script>
 	let publications = [
 		{
+			id: 'detective',
+			name: 'Blood on Whose Hands - The Impact of Hybridity and Distance Level on Board Game Player Experience',
+			authors: 'Devi Acharya, Laijana Braun, Yasheng She, Mirek Stolee',
+			venue: 'PAIDIA Special Edition - Monsters, Magic, Mediality',
+			year: '2024',
+			url: 'https://paidia.de/blood-on-whose-hands/',
+			abstract:
+				'This paper proposes a theoretical framework called “distance levels” for analyzing the shifting relationships between players and in-game characters in board games.'
+		},
+		{
 			id: 'shoelace',
 			name: 'Shoelace: A Storytelling Assistant for GUMSHOE One-2-One',
 			authors: 'Devi Acharya, Jack Kelly, William Tate, Maxwell Joslyn, Michael Mateas, Noah Wardrip-Fruin',
