@@ -13,6 +13,16 @@
 		// 	demo_url: 'https://devibri.github.io/FatalFrequenciesFrontend'
 		// },
 		{
+			id: 'doggone_detective',
+			priority: false,
+			tag: 'games',
+			name: 'Dog Gone Detective',
+			role: 'Unreal Developer',
+			slug: 'doggone.png',
+			description: 'A mystery game where you play as a world-class (dog) investigator. Gather clues by speaking to the witnesses - or accuse a suspect! Created as part of the Idisen Game Jam, 2025.',
+			url: 'https://idisen.itch.io/dog-gone-detective'
+		},
+		{
 			id: 'ttrpg',
 			priority: true,
 			tag: 'research',
@@ -77,16 +87,16 @@
 			url: 'https://apps.apple.com/us/app/fusion-galaxy/id999077925#?platform=ipad',
 			demo_url: 'https://apps.apple.com/us/app/fusion-galaxy/id999077925?ls=1'
 		},
-		{
-			id: 'red_survivor',
-			priority: false,
-			tag: 'games',
-			name: 'Red Survivor',
-			role: 'UI Artist',
-			slug: 'rs2.png',
-			description: 'A strategy game where the player fights to survive against killer robots in a war-torn Russia. Made with a team at Mustachio Games. Shown at Boston Festival of Indie Games, 2014.',
-			url: 'https://mustachiogames.itch.io/red-survivor'
-		}
+		// {
+		// 	id: 'red_survivor',
+		// 	priority: false,
+		// 	tag: 'games',
+		// 	name: 'Red Survivor',
+		// 	role: 'UI Artist',
+		// 	slug: 'rs2.png',
+		// 	description: 'A strategy game where the player fights to survive against killer robots in a war-torn Russia. Made with a team at Mustachio Games. Shown at Boston Festival of Indie Games, 2014.',
+		// 	url: 'https://mustachiogames.itch.io/red-survivor'
+		// }
 		// {
 		// 	id: 'if',
 		// 	priority: false,
