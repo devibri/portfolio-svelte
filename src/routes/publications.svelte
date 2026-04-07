@@ -27,7 +27,7 @@
 			authors: 'Devi Acharya, Michael Mateas, and Noah Wardrip-Fruin',
 			venue: 'Digital Games Research Association',
 			year: '2022',
-			url: 'Acharya_DiGRA2022.pdf',
+			url: 'https://www.devi.rocks/papers/Acharya_DiGRA2022.pdf',
 			abstract:
 				"In running tabletop roleplaying games (TTRPGs), game masters (GMs) are tasked with helping create and facilitate the building of a shared story between players based on player choices. In this paper, we look at how we can inform the design of computational tools for GMs through the use of qualitative interviews. We interview GMs about their process in preparing for and running a beginner TTRPG module, Lost Mine of Phandelver, and present to them a prototype of a computational tool built based on this module that has some of the features we believe would be useful in a GMing assistant, such as consolidating information for easier reference, serving as a brainstorming tool for GMs, and helping GMs keep track of what has happened in the game world. From these interviews, we collected insights into how the GMing process works within the context of a specific scenario and found which features GMs liked and what could be improved with our digital prototype. We also compare the results of these interviews to online advice for GMing the module. We use these insights in order to speculate about possible design directions for further development of a GM's computational assistant."
 		},
