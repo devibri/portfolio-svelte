@@ -107,7 +107,7 @@
 		},
 		{
 			id: 'vr',
-			tag: 'games',
+			tag: 'tools',
 			role: 'Researcher, Unity Developer',
 			name: 'Spatial Cognition in Virtual Reality',
 			slug: 'vr.jpg',
@@ -215,7 +215,7 @@
 					class="btn btn-md md:btn-lg capitalize"
 					on:click={() => (selectedTag = tag)}
 				>
-					{tag}
+					{tag === 'tools' ? 'tools + research' : tag}
 				</button>
 			{/each}
 		</div>
