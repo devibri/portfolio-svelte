@@ -41,6 +41,16 @@
 			tools: ['Python', 'Gradio', 'Svelte', 'Typescript', 'LLMs', 'Claude Sonnet'],
 			urls: []
 		},
+				{
+			id: 'match-3',
+			tag: 'tools',
+			name: 'Match-3 Level Generator',
+			role: 'Full-Stack Developer',
+			slug: 'aai.jpg',
+			description: "A level generator and editor for Match-3 games, created for 'Harry Potter: Puzzles and Spells' and 'Two Dots'. Allows designers to generate and edit levels in-browser using a graphical painting tool and text editor with error-checking. Uses PCG 'move' system to build valid levels accounting for user inputs like mechanics and requested symmetry.",
+			tools: ['Python', 'Svelte', 'Typescript', 'AWS'],
+			urls: []
+		},
 		{
 			id: 'doggone_detective',
 			tag: 'games',
