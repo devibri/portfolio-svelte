@@ -97,10 +97,10 @@
 			id: 'vr',
 			tag: 'games',
 			role: 'Researcher, Unity Developer',
-			name: 'Spatial Cognition in VR',
+			name: 'Spatial Cognition in Virtual Reality',
 			slug: 'vr.jpg',
 			description: 'A research game developed in Unity to help study the effects of different virtual reality methods of navigation on spatial orientation, including usage of landmarks, walking and turning, teleporting, and mixed physical and virtual navigation.',
-			tools: ['Unity', 'HTC Vive'],
+			tools: ['Unity', 'Virtual Reality'],
 			urls: [
 				{
 					"Read the Paper": "https://devibri.github.io/CompExamPortfolio/ttrpg.html"
@@ -117,7 +117,7 @@
 			name: 'VR / Physical Escape Room',
 			slug: 'escape.png',
 			description: "An escape room made in Unity with asymmetrical puzzle-solving in physical and virtual reality spaces. One participant wears a VR headset and the other interacts with the physical room, sharing their information in order to solve puzzles together. Made as a part of UCSC's Science Internship Program, where I co-mentored a group of high schoolers on research and game development.",
-			tools: ['Unity', 'HTC Vive'],
+			tools: ['Unity', 'Virtual Reality'],
 			urls: [
 				{
 					"Read More": "https://devibri.github.io/CompExamPortfolio/escaperoom.html"
