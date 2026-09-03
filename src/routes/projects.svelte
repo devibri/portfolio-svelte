@@ -58,6 +58,7 @@
 			tag: 'games',
 			name: 'Dog Gone Detective',
 			role: 'Unreal Developer',
+			with: 'Idisen Game Jam',
 			slug: 'doggone.png',
 			description: 'A mystery game where you play as a world-class (dog) investigator. Gather clues by speaking to the witnesses - or accuse a suspect! Created as part of the Idisen Game Jam, 2025.',
 			tools: ['Unreal Engine', 'point-and-click', 'branching dialog'],
@@ -71,10 +72,11 @@
 			id: 'ttrpg',
 			tag: 'tools',
 			name: 'TTRPG Game Master Assistant',
-			role: 'Researcher, Lead Developer',
+			role: 'Researcher + Developer',
+			with: 'Expressive Intelligence Studio @ UCSC',
 			slug: 'ttrpg2.png',
 			description: 'A co-creative AI assistant for game masters of tabletop roleplaying games. Developed based on interviews with game masters, uses Prolog-based constraint-solving over a Cthulhu Confidential game module to visualize information about the game world and provide suggestions for what can happen next based on the player\'s past actions.',
-			tools: ['Prolog', 'JavaScript'],
+			tools: ['Prolog', 'JavaScript', 'Research Study'],
 			urls: [
 				{
 					"Read More": "https://devibri.github.io/CompExamPortfolio/ttrpg.html"
@@ -95,7 +97,8 @@
 			role: 'Unity Developer',
 			slug: 'warmer.png',
 			description: 'An NSF-funded game about climate change and human impacts on the environment using real environmental models, designed to help students learn about the impacts of actions on global emissions. Includes interactive minigames where players can enact legislation, protest emissions, and fight wildfires, seeing the effects of these actions on global temperatures.',
-			tools: ['Unity'],
+			tools: ['Unity', 'point-and-click', 'systemic design'],
+			with: 'NSF-funded research group @ UCSC',
 			urls: [
 				{
 					"GitHub Repo": "https://github.com/devibri/UCSCClimateGame"
@@ -107,12 +110,13 @@
 		},
 		{
 			id: 'vr',
-			tag: 'tools',
-			role: 'Researcher, Unity Developer',
+			tag: 'games',
+			role: 'Researcher + Unity Developer',
 			name: 'Spatial Cognition in Virtual Reality',
 			slug: 'vr.jpg',
-			description: 'A research game developed in Unity to help study the effects of different virtual reality methods of navigation on spatial orientation, including usage of landmarks, walking and turning, teleporting, and mixed physical and virtual navigation.',
-			tools: ['Unity', 'Virtual Reality'],
+			with: 'Iowa State University',
+			description: 'A virtual reality research game developed in Unity to help study the effects of different VR navigation methods on spatial orientation, including usage of landmarks, walking and turning, teleporting, and mixed physical and virtual navigation.',
+			tools: ['Unity', 'Virtual Reality', 'Research Study'],
 			urls: [
 				{
 					"Read the Paper": "https://devibri.github.io/CompExamPortfolio/ttrpg.html"
@@ -125,10 +129,11 @@
 		{
 			id: 'escaperoom',
 			tag: 'games',
-			role: 'Researcher, Mentor',
+			role: 'Mentor',
 			name: 'VR / Physical Escape Room',
 			slug: 'escape.png',
-			description: "An escape room made in Unity with asymmetrical puzzle-solving in physical and virtual reality spaces. One participant wears a VR headset and the other interacts with the physical room, sharing their information in order to solve puzzles together. Made as a part of UCSC's Science Internship Program, where I co-mentored a group of high schoolers on research and game development.",
+			with: 'UCSC Science Internship Program',
+			description: "An escape room made in Unity with asymmetrical puzzle-solving in physical and virtual reality spaces. Served as co-mentor teaching research and game development techniques to high schoolers.",
 			tools: ['Unity', 'Virtual Reality'],
 			urls: [
 				{
@@ -145,9 +150,10 @@
 			tag: 'games',
 			name: 'Terasology: Light and Shadow',
 			role: 'Java Developer',
+			with: 'Google Summer of Code',
 			slug: 'terasology.jpg',
 			description: 'A capture-the-flag game mode made for open-source voxel game Terasology, made as part of Google Summer of Code.',
-			tools: ['Java', 'open-source'],
+			tools: ['Java', 'open-source', 'multiplayer', 'first-person'],
 			urls: [
 				{
 					"Read More": "https://dacharya64.postach.io/post/gsoc-final-project-wrapup"
@@ -162,6 +168,7 @@
 			tag: 'games',
 			name: 'Fusion Galaxy',
 			role: 'Lead Artist',
+			with: 'Massachusetts Digital Games Institute',
 			slug: 'cl.jpg',
 			description: 'A mobile game about collecting and crafting elements together to discover the universe, made with the Massachusetts Digital Games Institute.',
 			tools: ['Unity', 'Photoshop'],
@@ -179,6 +186,7 @@
 			tag: 'games',
 			name: 'Red Survivor',
 			role: 'UI Artist',
+			with: 'Mustachio Games',
 			slug: 'rs2.png',
 			description: 'A strategy game where the player fights to survive against killer robots in a war-torn Russia. Made with a team at Mustachio Games. Shown at Boston Festival of Indie Games, 2014.',
 			tools: ['Unity', 'Photoshop'],
@@ -215,7 +223,7 @@
 					class="btn btn-md md:btn-lg capitalize"
 					on:click={() => (selectedTag = tag)}
 				>
-					{tag === 'tools' ? 'tools + research' : tag}
+					{tag}
 				</button>
 			{/each}
 		</div>
