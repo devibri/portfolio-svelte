@@ -35,8 +35,8 @@
 			id: 'letterlock',
 			tag: 'tools',
 			name: 'Letter Lock Puzzle Generator',
-			role: 'Full-Stack Developer, Tech Lead',
-			slug: 'aai.jpg',
+			role: 'Full-Stack Developer',
+			slug: 'letterlock.jpg',
 			description: "A puzzle generator and editor for Words with Friend's Letter Lock puzzle game. Allows designers to generate, edit, and playtest puzzles in the browser. Uses constraint-solving and LLM integration to generate words and puzzles based on inputted puzzle size and theme.",
 			tools: ['Python', 'Gradio', 'Svelte', 'Typescript', 'LLMs', 'Claude Sonnet'],
 			urls: []
@@ -46,7 +46,7 @@
 			tag: 'tools',
 			name: 'Match-3 Level Generator',
 			role: 'Full-Stack Developer',
-			slug: 'aai.jpg',
+			slug: 'hpps.jpg',
 			description: "A level generator and editor for Match-3 games, created for 'Harry Potter: Puzzles and Spells' and 'Two Dots'. Allows designers to generate and edit levels in-browser using a graphical painting tool and text editor with error-checking. Uses PCG 'move' system to build valid levels accounting for user inputs like mechanics and requested symmetry.",
 			tools: ['Python', 'Svelte', 'Typescript', 'AWS'],
 			urls: []
