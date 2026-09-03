@@ -6,13 +6,13 @@
 		href: string;
 	};
 
-	function getProjectLinks(project: { urls?: Record<string, string>[]; url?: string }): ProjectLink[] {
+	function getProjectLinks(project: { urls?: Array<Record<string, string | undefined>>; url?: string }): ProjectLink[] {
 		if (Array.isArray(project.urls)) {
 			const links: ProjectLink[] = [];
 
 			for (const entry of project.urls) {
 				for (const [label, href] of Object.entries(entry)) {
-					if (href) links.push({ label, href });
+					if (typeof href === 'string' && href) links.push({ label, href });
 				}
 			}
 
@@ -59,7 +59,7 @@
 			id: 'ttrpg',
 			tag: 'tools',
 			name: 'TTRPG Game Master Assistant',
-			role: 'Lead Researcher, Developer',
+			role: 'Researcher, Lead Developer',
 			slug: 'ttrpg2.png',
 			description: 'A co-creative AI assistant for game masters of tabletop roleplaying games. Developed based on interviews with game masters, uses Prolog-based constraint-solving over a Cthulhu Confidential game module to visualize information about the game world and provide suggestions for what can happen next based on the player\'s past actions.',
 			tools: ['Prolog', 'JavaScript'],
@@ -82,7 +82,7 @@
 			name: 'Warmer',
 			role: 'Unity Developer',
 			slug: 'warmer.png',
-			description: 'An NSF-funded game about climate change and human impacts on the environment using real environmental models.',
+			description: 'An NSF-funded game about climate change and human impacts on the environment using real environmental models, designed to help students learn about the impacts of actions on global emissions. Includes interactive minigames where players can enact legislation, protest emissions, and fight wildfires, seeing the effects of these actions on global temperatures.',
 			tools: ['Unity'],
 			urls: [
 				{
@@ -116,7 +116,7 @@
 			role: 'Researcher, Mentor',
 			name: 'VR / Physical Escape Room',
 			slug: 'escape.png',
-			description: "An escape room made in Unity with asymmetrical puzzle-solving in physical and virtual reality spaces. Made at UCSC's Science Internship Program.",
+			description: "An escape room made in Unity with asymmetrical puzzle-solving in physical and virtual reality spaces. One participant wears a VR headset and the other interacts with the physical room, sharing their information in order to solve puzzles together. Made as a part of UCSC's Science Internship Program, where I co-mentored a group of high schoolers on research and game development.",
 			tools: ['Unity', 'HTC Vive'],
 			urls: [
 				{
@@ -215,6 +215,13 @@
 					<section class="p-6">
 						<h3 class="h3">{project.name}</h3>
 						<h4 class="h4"><strong>{project.role}</strong></h4>
+						{#if Array.isArray(project.tools) && project.tools.length > 0}
+							<div class="tool-chip-container">
+								{#each project.tools as tool}
+									<span class="tool-chip">{tool}</span>
+								{/each}
+							</div>
+						{/if}
 						<p>{project.description}</p>
 					</section>
 					<footer class="card-footer mt-auto">

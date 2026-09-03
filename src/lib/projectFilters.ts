@@ -7,6 +7,8 @@ export type Project = {
 	slug?: string;
 	description?: string;
 	url?: string;
+	urls?: Array<Record<string, string | undefined>>;
+	tools?: string[];
 	github_url?: string;
 	demo_url?: string;
 };
