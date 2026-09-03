@@ -39,7 +39,7 @@
 			slug: 'letterlock.jpg',
 			with: 'Take-Two AI',
 			description: "A puzzle generator and editor for the Letter Lock minigame in <em>Words with Friends</em>. Allows designers to generate, edit, and playtest puzzles in the browser. Uses constraint-solving and LLM integration to generate words and puzzles based on inputted puzzle size and theme.",
-			tools: ['Python', 'Gradio', 'Svelte', 'Typescript', 'LLMs', 'Claude Sonnet'],
+			tools: ['Python', 'Svelte', 'Typescript', 'AWS', 'LLMs', 'Procedural Content Generation'],
 			urls: []
 		},
 				{
@@ -47,9 +47,10 @@
 			tag: 'tools',
 			name: 'Match-3 Level Generator',
 			role: 'Full-Stack Developer',
-			slug: 'hpps.jpg',
-			description: "A level generator and editor for Match-3 games, created for 'Harry Potter: Puzzles and Spells' and 'Two Dots'. Allows designers to generate and edit levels in-browser using a graphical painting tool and text editor with error-checking. Uses PCG 'move' system to build valid levels accounting for user inputs like mechanics and requested symmetry.",
-			tools: ['Python', 'Svelte', 'Typescript', 'AWS'],
+			with: 'Zynga Applied AI',
+			slug: 'twodots.png',
+			description: "A level generator and editor for Match-3 games, created for <em>Harry Potter: Puzzles and Spells</em> and <em>Two Dots</em>. Allows designers to generate and edit levels in-browser using a graphical painting tool, speeding up design time and visualization. Uses PCG system to build valid levels with requested inputs like hazards and symmetry.",
+			tools: ['Python', 'Svelte', 'Typescript', 'AWS', 'Procedural Content Generation'],
 			urls: []
 		},
 		{
@@ -59,7 +60,7 @@
 			role: 'Unreal Developer',
 			slug: 'doggone.png',
 			description: 'A mystery game where you play as a world-class (dog) investigator. Gather clues by speaking to the witnesses - or accuse a suspect! Created as part of the Idisen Game Jam, 2025.',
-			tools: ['Unreal Engine'],
+			tools: ['Unreal Engine', 'point-and-click', 'branching dialog'],
 			urls: [
 				{
 					"Play Now": "https://idisen.itch.io/dog-gone-detective"
@@ -225,10 +226,7 @@
 					<section class="p-6">
 						<h3 class="h3">{project.name}</h3>
 						<h4 class="h4">
-							<strong>{project.role}</strong>
-							{#if project.with}
-								<span class="project-role-detail">, {project.with}</span>
-							{/if}
+							<strong>{project.role}</strong>{#if project.with}<span class="project-role-detail">, {project.with}</span>{/if}
 						</h4>
 						{#if Array.isArray(project.tools) && project.tools.length > 0}
 							<div class="tool-chip-container">
@@ -244,7 +242,6 @@
 							{#each getProjectLinks(project) as link}
 								<a href={link.href} type="button" class="btn variant-filled cardbutton">
 									<span>{link.label}</span>
-									<span><i class="fa-solid fa-circle-chevron-right"></i></span>
 								</a>
 							{/each}
 						</div>
