@@ -5,5 +5,7 @@
 </script>
 
 <Bio />
+<div class="section-divider" aria-hidden="true"></div>
 <Projects />
+<div class="section-divider" aria-hidden="true"></div>
 <Publications />

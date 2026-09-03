@@ -193,15 +193,14 @@
 </script>
 
 <section class="projects">
-	<h1 class="h1">Projects</h1>
 	<section class="other-projects">
-		<div class="mb-6 flex flex-wrap items-center gap-3">
+		<div class="mb-6 flex flex-wrap items-center justify-center gap-3">
 			{#each availableTags as tag}
 				<button
 					type="button"
 					class:variant-filled-primary={selectedTag === tag}
 					class:variant-soft-primary={selectedTag !== tag}
-					class="btn capitalize"
+					class="btn btn-md md:btn-lg capitalize"
 					on:click={() => (selectedTag = tag)}
 				>
 					{tag}
