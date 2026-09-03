@@ -12,7 +12,7 @@
 				<i class="fa-solid fa-gears"></i>
 				<span class="intro">Hi, I'm <strong>Devi Acharya</strong></span>
 			</h2>
-			<h4 class="h4">I design and develop AI tools for games & interactive media</h4>
+			<h4 class="h4">I develop applied AI tools for game studios to help accelerate design and development. I'm experienced working with client teams to understand their needs and build tools and prototypes to support them, ranging from procedural content generators with LLM integration to Unity playables.</h4>
 		</div>
 		<Timeline />
 	</div>
