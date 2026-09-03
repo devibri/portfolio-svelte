@@ -188,8 +188,8 @@
 			role: 'UI Artist',
 			with: 'Mustachio Games',
 			slug: 'rs2.png',
-			description: 'A strategy game where the player fights to survive against killer robots in a war-torn Russia. Made with a team at Mustachio Games. Shown at Boston Festival of Indie Games, 2014.',
-			tools: ['Unity', 'Photoshop'],
+			description: 'A strategy game where the player fights to survive against killer robots in a war-torn Russia. Shown at Boston Festival of Indie Games, 2014.',
+			tools: ['Unity', 'Photoshop', 'point-and-click'],
 			urls: [
 				{
 					"Play Now": "https://mustachiogames.itch.io/red-survivor"
