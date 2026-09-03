@@ -37,7 +37,8 @@
 			name: 'Letter Lock Puzzle Generator',
 			role: 'Full-Stack Developer',
 			slug: 'letterlock.jpg',
-			description: "A puzzle generator and editor for Words with Friend's Letter Lock puzzle game. Allows designers to generate, edit, and playtest puzzles in the browser. Uses constraint-solving and LLM integration to generate words and puzzles based on inputted puzzle size and theme.",
+			with: 'Take-Two AI',
+			description: "A puzzle generator and editor for the Letter Lock minigame in <em>Words with Friends</em>. Allows designers to generate, edit, and playtest puzzles in the browser. Uses constraint-solving and LLM integration to generate words and puzzles based on inputted puzzle size and theme.",
 			tools: ['Python', 'Gradio', 'Svelte', 'Typescript', 'LLMs', 'Claude Sonnet'],
 			urls: []
 		},
@@ -223,7 +224,12 @@
 					<img src="/img/{project.slug}" class="rounded-lg w-full h-60 object-cover" alt="Thumbnail for project {project.name}" />
 					<section class="p-6">
 						<h3 class="h3">{project.name}</h3>
-						<h4 class="h4"><strong>{project.role}</strong></h4>
+						<h4 class="h4">
+							<strong>{project.role}</strong>
+							{#if project.with}
+								<span class="project-role-detail">, {project.with}</span>
+							{/if}
+						</h4>
 						{#if Array.isArray(project.tools) && project.tools.length > 0}
 							<div class="tool-chip-container">
 								{#each project.tools as tool}
@@ -231,7 +237,7 @@
 								{/each}
 							</div>
 						{/if}
-						<p>{project.description}</p>
+						<p>{@html project.description}</p>
 					</section>
 					<footer class="card-footer mt-auto">
 						<div class="cardbuttoncontainer">

@@ -1,16 +1,13 @@
 export type Project = {
 	id: string;
-	priority?: boolean;
 	tag: string;
 	name: string;
 	role?: string;
+	with?: string;
 	slug?: string;
 	description?: string;
-	url?: string;
 	urls?: Array<Record<string, string | undefined>>;
 	tools?: string[];
-	github_url?: string;
-	demo_url?: string;
 };
 
 export function getAvailableTags(projects: Project[]) {
