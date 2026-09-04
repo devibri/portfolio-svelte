@@ -259,7 +259,7 @@
 					<footer class="card-footer mt-auto">
 						<div class="cardbuttoncontainer">
 							{#each getProjectLinks(project) as link}
-								<a href={link.href} type="button" class="btn variant-filled cardbutton">
+								<a href={link.href} type="button" class="btn variant-soft-primary cardbutton">
 									<span>{link.label}</span>
 								</a>
 							{/each}
