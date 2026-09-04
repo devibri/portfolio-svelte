@@ -68,6 +68,17 @@
 				}
 			]
 		},
+				{
+			id: 'ep_ads',
+			tag: 'tools',
+			name: 'Episodic Ads',
+			role: 'Unity Developer',
+			with: 'Zynga Applied AI',
+			slug: 'farmville.jpg',
+			description: 'A proof-of-concept prototype showcasing a storylet-driven lightweight procedural narrative game to allow for highly player-driven, emergent narrative in short-form experiences. Uses <em>Farmville</em> as an example setting, but with setting-agnostic JSON structures to allow you to build playable experiences for any scenario and with custom images and stats.',
+			tools: ['Unity', 'procedural narrative', 'storylets', 'choice-based', 'systemic design'],
+			urls: []
+		},
 		{
 			id: 'ttrpg',
 			tag: 'tools',
