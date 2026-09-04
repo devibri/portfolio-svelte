@@ -8,7 +8,7 @@
 		<a href="../">
 			<h4 class="h4">
 				<strong>Devi Acharya</strong>
-				| <i class="fa-solid fa-gears"></i> AI in Games
+				| <i class="fa-solid fa-gears"></i> AI + Games
 			</h4>
 		</a>
 	</div>
@@ -20,13 +20,16 @@
 					<a href="../"><i class="fa-solid fa-house"></i></a>
 				</li> -->
 				<li>
-					<a href="http://linkedin.com/in/dacharya/"><i class="fa-brands fa-linkedin"></i></a>
+					<a class="header-social-link" href="http://linkedin.com/in/dacharya/"><i class="fa-brands fa-linkedin"></i></a>
 				</li>
 				<li>
-					<a href="https://github.com/devibri"><i class="fa-brands fa-github"></i></a>
+					<a class="header-social-link" href="https://github.com/devibri"><i class="fa-brands fa-github"></i></a>
 				</li>
 				<li>
-					<a href="mailto:devi@devi.rocks"><i class="fa-solid fa-envelope"></i></a>
+					<a class="header-social-link" href="https://scholar.google.com/citations?user=cfJU7JgAAAAJ&hl=en"><i class="fa-brands fa-google-scholar"></i></a>
+				</li>
+				<li>
+					<a class="header-social-link" href="mailto:devi@devi.rocks"><i class="fa-solid fa-envelope"></i></a>
 				</li>
 				<li><LightSwitch /></li>
 			</ul>
