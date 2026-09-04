@@ -12,7 +12,7 @@
 				<i class="fa-solid fa-gears"></i>
 				<span class="intro">Hi, I'm <strong>Devi Acharya</strong></span>
 			</h2>
-			<h4 class="h4">I develop applied AI tools for game studios to help accelerate design and development as a part of Take-Two Interactive's AI team. I'm experienced working with client teams to understand their needs and build tools and prototypes to support them, ranging from procedural content generators with LLM integration to Unity games.</h4>
+			<h4 class="h4">I develop applied AI tools for game studios to help accelerate design and development as a part of Take-Two Interactive's AI team. I'm experienced working with client teams to understand their needs and build tools and prototypes to support them, ranging from procedural content generators with LLM integration to Unity games and full-stack web applications.</h4>
 			<br>
 			<div class="bio-education">
 				M.S. in <strong>Computational Media</strong>, University of California, Santa Cruz

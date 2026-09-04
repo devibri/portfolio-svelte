@@ -60,7 +60,7 @@
 			role: 'Unreal Developer',
 			with: 'Idisen Game Jam',
 			slug: 'doggone.png',
-			description: 'A mystery game where you play as a world-class (dog) investigator. Gather clues by speaking to the witnesses - or accuse a suspect! Created as part of the Idisen Game Jam, 2025.',
+			description: 'A mystery point-and-click game where you play as a world-class (dog) investigator. Gather clues by speaking to the witnesses - or accuse a suspect! Created as part of the Idisen Game Jam, 2025.',
 			tools: ['Unreal Engine', 'point-and-click', 'branching dialog'],
 			urls: [
 				{
@@ -75,7 +75,7 @@
 			role: 'Unity Developer',
 			with: 'Zynga Applied AI',
 			slug: 'farmville.jpg',
-			description: 'A proof-of-concept prototype showcasing a storylet-driven lightweight procedural narrative game to allow for highly player-driven, emergent narrative in short-form experiences. Uses <em>Farmville</em> as an example setting, but with setting-agnostic JSON structures to allow you to build playable experiences for any scenario and with custom images and stats.',
+			description: 'A system for creating short-form, emergent narrative games in Unity using social simulation to model characters\' reactions to player choices. Uses <em>Farmville</em> as an example setting, but uses setting-agnostic JSON to support playable experiences for any scenario with custom images, dialog, and stats.',
 			tools: ['Unity', 'procedural narrative', 'storylets', 'choice-based', 'systemic design'],
 			urls: []
 		},
@@ -86,7 +86,7 @@
 			role: 'Researcher + Developer',
 			with: 'Expressive Intelligence Studio @ UCSC',
 			slug: 'ttrpg2.png',
-			description: 'A co-creative AI assistant for game masters of tabletop roleplaying games. Developed based on interviews with game masters, uses Prolog-based constraint-solving over a Cthulhu Confidential game module to visualize information about the game world and provide suggestions for what can happen next based on the player\'s past actions.',
+			description: 'A co-creative AI assistant for game masters of tabletop roleplaying games. Developed based on interviews with game masters, the tool uses Prolog-based constraint-solving over a Cthulhu Confidential game module to visualize information about the game world and provide suggestions for what can happen next based on the player\'s past actions.',
 			tools: ['Prolog', 'JavaScript', 'Research Study'],
 			urls: [
 				{
@@ -164,7 +164,7 @@
 			with: 'Google Summer of Code',
 			slug: 'terasology.jpg',
 			description: 'A capture-the-flag game mode made for open-source voxel game Terasology, made as part of Google Summer of Code.',
-			tools: ['Java', 'open-source', 'multiplayer', 'first-person'],
+			tools: ['Java', 'open-source', 'multiplayer'],
 			urls: [
 				{
 					"Read More": "https://dacharya64.postach.io/post/gsoc-final-project-wrapup"

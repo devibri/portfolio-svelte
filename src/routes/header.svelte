@@ -8,7 +8,7 @@
 		<a href="../">
 			<h4 class="h4">
 				<strong>Devi Acharya</strong>
-				| <i class="fa-solid fa-gears"></i> AI in Games
+				| <i class="fa-solid fa-gears"></i> AI + Games
 			</h4>
 		</a>
 	</div>
