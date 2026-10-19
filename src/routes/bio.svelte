@@ -1,5 +1,6 @@
 <script>
 	import Timeline from './timeline.svelte';
+	import Gears from './gears.svelte';
 </script>
 
 <div class="grid grid-rows-1 gap-4 lg:grid-cols-[repeat(auto-fit,_14.666666%)] grid-cols-1 m-auto justify-center">
@@ -9,7 +10,7 @@
 	<div class="col-span-3 justify-center justify-self-center mx-auto">
 		<div class="bio">
 			<h2 class="h2">
-				<i class="fa-solid fa-gears"></i>
+				<Gears />
 				<span class="intro">Hi, I'm <strong>Devi Acharya</strong></span>
 			</h2>
 			<h4 class="h4">I develop applied AI tools for game studios to help accelerate design and development as a part of Take-Two Interactive's AI team. I'm experienced working with client teams to understand their needs and build tools and prototypes to support them, ranging from procedural content generators with LLM integration to Unity games and full-stack web applications.</h4>

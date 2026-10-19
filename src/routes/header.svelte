@@ -1,5 +1,6 @@
 <script>
 	import { LightSwitch } from '@skeletonlabs/skeleton';
+	import Gears from './gears.svelte';
 </script>
 
 <!-- Header -->
@@ -8,7 +9,7 @@
 		<a href="../">
 			<h4 class="h4">
 				<strong>Devi Acharya</strong>
-				| <i class="fa-solid fa-gears"></i> AI + Games
+				| <Gears /> AI + Games
 			</h4>
 		</a>
 	</div>
