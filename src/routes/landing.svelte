@@ -52,16 +52,19 @@
 <Bio />
 <div class="section-divider" aria-hidden="true"></div>
 <div class="my-8 flex justify-center">
-	<div class="btn-group variant-soft-primary" role="tablist" aria-label="Show projects or publications">
-		{#each sections as section}
+	<div class="flex justify-center" role="tablist" aria-label="Show projects or publications">
+		{#each sections as section, i}
 			<button
 				type="button"
 				role="tab"
 				id="tab-{section.id}"
 				aria-selected={activeSection === section.id}
 				aria-controls="panel-{section.id}"
-				class="btn-lg md:text-xl font-bold"
+				class="btn rounded-none px-8 py-3 text-lg md:px-10 md:text-xl font-bold"
+				class:rounded-l-lg={i === 0}
+				class:rounded-r-lg={i === sections.length - 1}
 				class:variant-filled-primary={activeSection === section.id}
+				class:variant-soft-primary={activeSection !== section.id}
 				on:click={() => selectSection(section.id)}
 			>
 				{section.label}
