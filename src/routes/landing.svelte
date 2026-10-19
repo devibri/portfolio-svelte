@@ -7,8 +7,7 @@
 
 	const sections = [
 		{ id: 'projects', label: 'Projects' },
-		{ id: 'publications', label: 'Publications' },
-		{ id: 'speaking', label: 'Speaking & Mentorship' }
+		{ id: 'publications', label: 'Publications + Speaking' }
 	] as const;
 
 	type SectionId = (typeof sections)[number]['id'];
@@ -54,17 +53,15 @@
 <Bio />
 <div class="section-divider" aria-hidden="true"></div>
 <div class="my-8 flex justify-center">
-	<div class="flex justify-center" role="tablist" aria-label="Show projects or publications">
-		{#each sections as section, i}
+	<div class="flex flex-wrap justify-center gap-3" role="tablist" aria-label="Show projects or publications">
+		{#each sections as section}
 			<button
 				type="button"
 				role="tab"
 				id="tab-{section.id}"
 				aria-selected={activeSection === section.id}
 				aria-controls="panel-{section.id}"
-				class="btn rounded-none px-8 py-3 text-lg md:px-10 md:text-xl font-bold"
-				class:rounded-l-lg={i === 0}
-				class:rounded-r-lg={i === sections.length - 1}
+				class="btn rounded-lg px-8 py-3 text-lg md:px-10 md:text-xl font-bold"
 				class:variant-filled-primary={activeSection === section.id}
 				class:variant-soft-primary={activeSection !== section.id}
 				on:click={() => selectSection(section.id)}
@@ -87,9 +84,9 @@
 			>
 				{#if section.id === 'projects'}
 					<Projects />
-				{:else if section.id === 'publications'}
-					<Publications />
 				{:else}
+					<Publications />
+					<div class="section-divider mb-8" aria-hidden="true"></div>
 					<Speaking />
 				{/if}
 			</div>
