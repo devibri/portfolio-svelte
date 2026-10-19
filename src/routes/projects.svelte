@@ -278,7 +278,7 @@
 					<p class="muted text-sm leading-relaxed">{@html project.description}</p>
 				</section>
 				{#if getProjectLinks(project).length > 0}
-					<footer class="card-footer flex flex-wrap gap-2">
+					<footer class="card-footer flex flex-wrap justify-center gap-2">
 						{#each getProjectLinks(project) as link, i}
 							<a href={link.href} class="btn btn-sm {i === 0 ? 'variant-filled-primary' : 'variant-ghost-primary'}">
 								<span>{link.label}</span>
