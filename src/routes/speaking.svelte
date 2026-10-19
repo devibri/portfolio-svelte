@@ -1,5 +1,5 @@
 <script>
-	let engagements = [
+	const engagements = [
 		{
 			role: 'Instructor and Speaker',
 			event: 'Girl Scouts Digital Game Design Workshop',
@@ -21,7 +21,7 @@
 		{
 			role: 'Mentor',
 			event: 'Zynga x North Carolina A&T Mentorship Program',
-			host: 'Noth Carolina State University',
+			host: 'North Carolina State University',
 			date: 'Sept 2024 - May 2025'
 		},
 		{
@@ -34,20 +34,17 @@
 </script>
 
 <section class="speaking">
-	<h1 class="h1">Speaking &amp; Mentorship</h1>
-	{#each engagements as engagement}
-		<div class="list-dl">
-			<div class="article">
-				<span class="flex-auto">
-					<dt><h4 class="h4">{engagement.event}</h4></dt>
-					{#if engagement.host}
-						<dd>{engagement.host}</dd>
-					{/if}
-					<dd>
-						<em>{engagement.role}</em>, {engagement.date}
-					</dd>
-				</span>
-			</div>
-		</div>
-	{/each}
+	<h2 class="h2 section-title">Speaking &amp; Mentorship</h2>
+	<ol class="relative ml-2 border-l-2 border-primary-500/30">
+		{#each engagements as engagement}
+			<li class="relative mb-8 pl-8 last:mb-0">
+				<span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-primary-500 ring-4 ring-surface-50 dark:ring-surface-900" aria-hidden="true"></span>
+				<p class="muted text-xs font-semibold uppercase tracking-wider">{engagement.date}</p>
+				<h3 class="h4 mt-1 font-semibold">{engagement.event}</h3>
+				<p class="text-sm">
+					<span class="font-semibold text-primary-600 dark:text-primary-400">{engagement.role}</span>{#if engagement.host}<span class="muted"> · {engagement.host}</span>{/if}
+				</p>
+			</li>
+		{/each}
+	</ol>
 </section>

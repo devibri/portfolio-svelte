@@ -1,6 +1,8 @@
 <script lang="ts">
 	import '../app.postcss';
 	import '@fortawesome/fontawesome-free/css/all.min.css';
+	import Header from './header.svelte';
+	import Footer from './footer.svelte';
 
 	// Highlight JS
 	import hljs from 'highlight.js/lib/core';
@@ -23,4 +25,10 @@
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
-<slot />
+<div class="flex min-h-screen flex-col">
+	<Header />
+	<main class="flex-1">
+		<slot />
+	</main>
+	<Footer />
+</div>

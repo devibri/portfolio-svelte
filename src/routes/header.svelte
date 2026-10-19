@@ -1,39 +1,36 @@
 <script>
 	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import Gears from './gears.svelte';
+
+	const socialLinks = [
+		{ label: 'LinkedIn', href: 'https://linkedin.com/in/dacharya/', icon: 'fa-brands fa-linkedin' },
+		{ label: 'GitHub', href: 'https://github.com/devibri', icon: 'fa-brands fa-github' },
+		{ label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=cfJU7JgAAAAJ&hl=en', icon: 'fa-brands fa-google-scholar' },
+		{ label: 'Email', href: 'mailto:devi@devi.rocks', icon: 'fa-solid fa-envelope' }
+	];
 </script>
 
-<!-- Header -->
-<header class="flex p-4 justify-between">
-	<div>
-		<a href="../">
-			<h4 class="h4">
-				<strong>Devi Acharya</strong>
-				| <Gears /> AI + Games
-			</h4>
+<header class="sticky top-0 z-20 border-b border-surface-500/10 bg-surface-50/75 backdrop-blur dark:bg-surface-900/75">
+	<div class="page-container flex items-center justify-between gap-4 py-3">
+		<a href="/" class="flex items-center gap-2 font-heading-token text-lg font-semibold sm:text-xl">
+			<strong>Devi Acharya</strong>
+			<span class="hidden items-center gap-2 sm:inline-flex">
+				<span class="opacity-40">|</span>
+				<Gears /> AI + Games
+			</span>
 		</a>
-	</div>
 
-	<div>
-		<div class="hidden w-full md:block md:w-auto" id="navbar-default">
-			<ul class="flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-				<!-- <li>
-					<a href="../"><i class="fa-solid fa-house"></i></a>
-				</li> -->
-				<li>
-					<a class="header-social-link" href="http://linkedin.com/in/dacharya/"><i class="fa-brands fa-linkedin"></i></a>
-				</li>
-				<li>
-					<a class="header-social-link" href="https://github.com/devibri"><i class="fa-brands fa-github"></i></a>
-				</li>
-				<li>
-					<a class="header-social-link" href="https://scholar.google.com/citations?user=cfJU7JgAAAAJ&hl=en"><i class="fa-brands fa-google-scholar"></i></a>
-				</li>
-				<li>
-					<a class="header-social-link" href="mailto:devi@devi.rocks"><i class="fa-solid fa-envelope"></i></a>
-				</li>
+		<nav aria-label="Social links">
+			<ul class="flex items-center gap-4 sm:gap-6">
+				{#each socialLinks as link}
+					<li>
+						<a class="header-social-link" href={link.href} aria-label={link.label} title={link.label}>
+							<i class={link.icon}></i>
+						</a>
+					</li>
+				{/each}
 				<li><LightSwitch /></li>
 			</ul>
-		</div>
+		</nav>
 	</div>
 </header>
