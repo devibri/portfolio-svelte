@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { filterProjectsByTag, getAvailableTags } from '../lib/projectFilters';
-
 	type ProjectLink = {
 		label: string;
 		href: string;
@@ -27,8 +25,6 @@
 
 		return [];
 	}
-
-	let selectedTag = 'all';
 
 	let projects = [
 		{
@@ -218,28 +214,13 @@
 		// 	url: 'https://textadventures.co.uk/games/view/ob1-nceir0a6dpocknuxyw/the-abyss'
 		// }
 	];
-
-	$: availableTags = getAvailableTags(projects);
-	$: filteredProjects = filterProjectsByTag(projects, selectedTag);
 </script>
 
 <section class="projects">
+	<h1 class="h1 mb-6">Projects</h1>
 	<section class="other-projects">
-		<div class="mb-6 flex flex-wrap items-center justify-center gap-3">
-			{#each availableTags as tag}
-				<button
-					type="button"
-					class:variant-filled-primary={selectedTag === tag}
-					class:variant-soft-primary={selectedTag !== tag}
-					class="btn btn-md md:btn-lg capitalize"
-					on:click={() => (selectedTag = tag)}
-				>
-					{tag}
-				</button>
-			{/each}
-		</div>
 		<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-			{#each filteredProjects as project}
+			{#each projects as project}
 				<div class="card card-hover flex flex-col">
 					<img src="/img/{project.slug}" class="rounded-lg w-full h-60 object-cover" alt="Thumbnail for project {project.name}" />
 					<section class="p-6">
