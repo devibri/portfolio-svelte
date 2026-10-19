@@ -2,11 +2,13 @@
 	import Publications from './publications.svelte';
 	import Projects from './projects.svelte';
 	import Bio from './bio.svelte';
+	import Speaking from './speaking.svelte';
 	import { cubicInOut } from 'svelte/easing';
 
 	const sections = [
 		{ id: 'projects', label: 'Projects' },
-		{ id: 'publications', label: 'Publications' }
+		{ id: 'publications', label: 'Publications' },
+		{ id: 'speaking', label: 'Speaking & Mentorship' }
 	] as const;
 
 	type SectionId = (typeof sections)[number]['id'];
@@ -85,8 +87,10 @@
 			>
 				{#if section.id === 'projects'}
 					<Projects />
-				{:else}
+				{:else if section.id === 'publications'}
 					<Publications />
+				{:else}
+					<Speaking />
 				{/if}
 			</div>
 		{/if}
