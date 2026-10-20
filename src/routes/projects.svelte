@@ -43,9 +43,10 @@
 			role: 'Full-Stack Developer',
 			slug: 'letterlock.jpg',
 			with: 'Take-Two AI',
+			tagline: 'A creativity support tool for generating word puzzles using procedural content generator and LLMs, speeding up puzzle design time for <em>Words with Friends</em> team.',
 			description:
 				'A puzzle generator and editor for the Letter Lock minigame in <em>Words with Friends</em>. Allows designers to generate, edit, and playtest puzzles in the browser. Uses constraint-solving and LLM integration to generate words and puzzles based on inputted puzzle size and theme.',
-			tools: ['Python', 'Svelte', 'Typescript', 'AWS', 'LLMs', 'Procedural Content Generation'],
+			tools: ['Python', 'Typescript', 'AWS', 'LLM', 'PCG'],
 			urls: []
 		},
 		{
@@ -55,9 +56,10 @@
 			role: 'Full-Stack Developer',
 			with: 'Zynga Applied AI',
 			slug: 'twodots.png',
+			tagline: 'A tool for generating levels for Match-3 games, made for <em>Harry Potter: Puzzles and Spells</em> and <em>Two Dots</em> game teams to support rapid level design.',
 			description:
 				'A level generator and editor for Match-3 games, created for <em>Harry Potter: Puzzles and Spells</em> and <em>Two Dots</em>. Allows designers to generate and edit levels in-browser using a graphical painting tool, speeding up design time and visualization. Uses PCG system to build valid levels with requested inputs like hazards and symmetry.',
-			tools: ['Python', 'Svelte', 'Typescript', 'AWS', 'Procedural Content Generation'],
+			tools: ['Python', 'Typescript', 'AWS', 'PCG'],
 			urls: []
 		},
 		{
@@ -67,6 +69,7 @@
 			role: 'Unreal Developer',
 			with: 'Idisen Game Jam',
 			slug: 'doggone.png',
+			tagline: 'An Unreal mystery game where you play as a dog detective questioning suspects and solving the case of the missing Grand Champion.',
 			description:
 				'A mystery point-and-click game where you play as a world-class (dog) investigator. Gather clues by speaking to the witnesses - or accuse a suspect! Created as part of the Idisen Game Jam, 2025.',
 			tools: ['Unreal Engine', 'point-and-click', 'branching dialog'],
@@ -83,6 +86,7 @@
 			role: 'Unity Developer',
 			with: 'Zynga Applied AI',
 			slug: 'farmville.jpg',
+			tagline: 'An experimental PCG system for procedural ads, changing the contents of future ads based on previous ad choices, helping to increase ad engagement.',
 			description:
 				"A system for creating short-form, emergent narrative games in Unity using social simulation to model characters' reactions to player choices. Uses <em>Farmville</em> as an example setting, but uses setting-agnostic JSON to support playable experiences for any scenario with custom images, dialog, and stats.",
 			tools: ['Unity', 'procedural narrative', 'storylets', 'choice-based', 'systemic design'],
@@ -94,11 +98,12 @@
 			tag: 'tools',
 			name: 'TTRPG Game Master Assistant',
 			role: 'Researcher + Developer',
-			with: 'Expressive Intelligence Studio @ UCSC',
+			with: 'Expressive Intelligence Studio',
 			slug: 'ttrpg2.png',
+			tagline: 'A creativity support tool for game masters of tabletop roleplaying games using an underlying model of the game world to provide improv suggestions.',
 			description:
 				"A co-creative AI assistant for game masters of tabletop roleplaying games. Developed based on interviews with game masters, the tool uses Prolog-based constraint-solving over a Cthulhu Confidential game module to visualize information about the game world and provide suggestions for what can happen next based on the player's past actions.",
-			tools: ['Prolog', 'JavaScript', 'Research Study'],
+			tools: ['Prolog', 'JavaScript', 'Research'],
 			urls: [
 				{
 					'GitHub Repo': 'https://github.com/devibri/FatalFrequenciesFrontend'
@@ -116,6 +121,7 @@
 			name: 'Warmer',
 			role: 'Unity Developer',
 			slug: 'warmer.png',
+			tagline: 'A Unity game that teaches about human impact on climate change by letting students interact with real climate models through a series of minigames.',
 			description:
 				'An NSF-funded game about climate change and human impacts on the environment using real environmental models, designed to help students learn about the impacts of actions on global emissions. Includes interactive minigames where players can enact legislation, protest emissions, and fight wildfires, seeing the effects of these actions on global temperatures.',
 			tools: ['Unity', 'point-and-click', 'systemic design'],
@@ -136,9 +142,10 @@
 			name: 'Spatial Cognition in Virtual Reality',
 			slug: 'vr.jpg',
 			with: 'Iowa State University',
+			tagline: 'A virtual reality research game developed in Unity to help study the effects of different VR navigation methods on spatial orientation.',
 			description:
 				'A virtual reality research game developed in Unity to help study the effects of different VR navigation methods on spatial orientation, including usage of landmarks, walking and turning, teleporting, and mixed physical and virtual navigation.',
-			tools: ['Unity', 'Virtual Reality', 'Research Study'],
+			tools: ['Unity', 'Virtual Reality', 'Research'],
 			urls: [
 				{
 					'Read the Paper': '/papers/spatial.pdf'
@@ -156,6 +163,7 @@
 			name: 'VR / Physical Escape Room',
 			slug: 'escape.png',
 			with: 'UCSC Science Internship Program',
+			tagline: 'An escape room made in Unity with asymmetrical puzzle-solving in physical and virtual reality spaces.',
 			description:
 				'An escape room made in Unity with asymmetrical puzzle-solving in physical and virtual reality spaces. Served as co-mentor teaching research and game development techniques to high schoolers.',
 			tools: ['Unity', 'Virtual Reality'],
@@ -173,6 +181,7 @@
 			role: 'Java Developer',
 			with: 'Google Summer of Code',
 			slug: 'terasology.jpg',
+			tagline: 'A capture-the-flag game mode made for open-source voxel game Terasology.',
 			description: 'A capture-the-flag game mode made for open-source voxel game Terasology, made as part of Google Summer of Code.',
 			tools: ['Java', 'open-source', 'multiplayer'],
 			urls: [
@@ -192,6 +201,7 @@
 			role: 'Lead Artist',
 			with: 'Massachusetts Digital Games Institute',
 			slug: 'cl.jpg',
+			tagline: 'A Unity mobile game about collecting and crafting elements together to discover the universe.',
 			description: 'A mobile game about collecting and crafting elements together to discover the universe, made with the Massachusetts Digital Games Institute.',
 			tools: ['Unity', 'Photoshop'],
 			urls: [
@@ -210,6 +220,7 @@
 			role: 'UI Artist',
 			with: 'Mustachio Games',
 			slug: 'rs2.png',
+			tagline: 'A Unity strategy game where the player fights to survive against killer robots in a war-torn Russia. Shown at Boston Festival of Indie Games, 2014.',
 			description: 'A strategy game where the player fights to survive against killer robots in a war-torn Russia. Shown at Boston Festival of Indie Games, 2014.',
 			tools: ['Unity', 'Photoshop', 'point-and-click'],
 			urls: [
@@ -275,7 +286,15 @@
 							{/each}
 						</div>
 					{/if}
-					<p class="muted text-sm leading-relaxed">{@html project.description}</p>
+					{#if project.tagline}
+						<p class="text-sm leading-relaxed">{@html project.tagline}</p>
+					{/if}
+					<!-- <details class="group/desc text-sm">
+						<summary class="cursor-pointer select-none font-semibold text-primary-600 dark:text-primary-400">
+							<span class="group-open/desc:hidden">Show details</span><span class="hidden group-open/desc:inline">Hide details</span>
+						</summary>
+						<p class="muted mt-2 leading-relaxed">{@html project.description}</p>
+					</details> -->
 				</section>
 				{#if getProjectLinks(project).length > 0}
 					<footer class="card-footer flex flex-wrap justify-center gap-2">
