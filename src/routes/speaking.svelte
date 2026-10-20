@@ -31,10 +31,28 @@
 			date: 'Sept 2024 - May 2025'
 		},
 		{
+			role: 'Panelist',
+			event: 'Storytelling and Roleplaying Games',
+			date: '2021',
+			host: 'GENeration Analog, Analog Game Studies'
+		},
+		{
 			role: 'IGDA Scholar',
 			event: 'Game Developers Conference',
 			host: 'International Game Developers Association',
 			date: 'March 2019'
+		},
+		{
+			role: 'Panelist',
+			event: 'Game Studies, Culture, Play & Practice',
+			date: '2019 - 2021',
+			host: 'Southwest Popular/American Culture Association'
+		},
+		{
+			role: 'Teaching Assistant',
+			event: 'Game Systems, Game Development Experience, Interactive Narrative, Foundations of Video Game Design, and Game Design Studio I, II, and III',
+			host: 'University of California, Santa Cruz',
+			date: '2014-2018'
 		}
 	];
 </script>
