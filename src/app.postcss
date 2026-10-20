@@ -28,6 +28,11 @@ strong {
 	@apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
 }
 
+/* Widen on the largest screens; case study prose keeps its reading width */
+.page-container:not(.projectpage) {
+	@apply 2xl:max-w-[90rem] 2xl:px-12;
+}
+
 .section-title {
 	@apply mb-8 flex items-center gap-3 font-bold;
 }
@@ -41,7 +46,9 @@ strong {
 	width: min(90%, 1100px);
 	height: 1px;
 	background: linear-gradient(to right, transparent, rgba(148, 163, 184, 0.8), transparent);
-	margin: 3rem auto 0;
+	margin-top: 3rem;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .muted {

@@ -42,7 +42,7 @@
 				<p class="muted text-xs font-semibold uppercase tracking-wider">{engagement.date}</p>
 				<h3 class="h4 mt-1 font-semibold">{engagement.event}</h3>
 				<p class="text-sm">
-					<span class="font-semibold text-primary-600 dark:text-primary-400">{engagement.role}</span>{#if engagement.host}<span class="muted"> · {engagement.host}</span>{/if}
+					<span class="font-semibold text-primary-600 dark:text-primary-400">{engagement.role}</span>{#if engagement.host}<span class="muted">{' · '}{engagement.host}</span>{/if}
 				</p>
 			</li>
 		{/each}

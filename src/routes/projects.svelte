@@ -266,7 +266,7 @@
 						{/if}
 					</h3>
 					<p class="text-sm">
-						<span class="font-semibold text-primary-600 dark:text-primary-400">{project.role}</span>{#if project.with}<span class="muted"> · {project.with}</span>{/if}
+						<span class="font-semibold text-primary-600 dark:text-primary-400">{project.role}</span>{#if project.with}<span class="muted">{' · '}{project.with}</span>{/if}
 					</p>
 					{#if Array.isArray(project.tools) && project.tools.length > 0}
 						<div class="flex flex-wrap gap-1.5">
