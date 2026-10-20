@@ -1,14 +1,9 @@
 <script>
-	import Footer from '../footer.svelte';
-	import Header from '../header.svelte';
+	import CaseStudy from '$lib/CaseStudy.svelte';
 </script>
 
-<Header />
-
-<section class="projectpage mx-28 2xl:mx-96 my-20">
+<CaseStudy title="Warmer" subtitle="An NSF-funded game about climate change." image="/img/warmer.png">
 	<div>
-		<h1 class="h1">Warmer</h1>
-		<h5 class="h5">An NSF-funded game about climate change.</h5>
 		<p>
 			From June - August 2021, I was a developer on <em>Warmer</em>, a game about climate change. Made in Unity and funded by the NSF,
 			<em>Warmer</em> is a game made to help students learn about climate change and how different actions could impact the world's temperatures in different ways. The game provided several different minigames
@@ -96,9 +91,8 @@
 				alt="The arctic minigame" />
 		</figure>
 	</div>
-	<section class="grid grid-cols-1 lg:grid-cols-2 gap-8 project-button-container">
+	<svelte:fragment slot="actions">
 		<a type="button" class="btn btn-lg variant-filled-primary" href="https://github.com/devibri/UCSCClimateGame"><span><i class="fa-brands fa-github"></i></span><span>Project Github</span></a>
 		<a type="button" class="btn btn-lg variant-filled-primary" href="https://devibri.github.io/ClimateGamePlayable/"><span><i class="fa-solid fa-gamepad"></i></span><span>Play now!</span></a>
-	</section>
-</section>
-<Footer />
+	</svelte:fragment>
+</CaseStudy>

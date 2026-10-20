@@ -1,5 +1,7 @@
 <script>
-	let publications = [
+	const ME = 'Devi Acharya';
+
+	const publications = [
 		{
 			id: 'detective',
 			name: 'Blood on Whose Hands - The Impact of Hybridity and Distance Level on Board Game Player Experience',
@@ -7,8 +9,7 @@
 			venue: 'PAIDIA Special Edition - Monsters, Magic, Mediality',
 			year: '2024',
 			url: 'https://paidia.de/blood-on-whose-hands/',
-			abstract:
-				'This paper proposes a theoretical framework called “distance levels” for analyzing the shifting relationships between players and in-game characters in board games.'
+			abstract: 'This paper proposes a theoretical framework called “distance levels” for analyzing the shifting relationships between players and in-game characters in board games. It builds on Britta Neitzel\'s Points of Action, originally used to examine digital avatars, and Erving Goffman\'s concept of role distance. Using the board game \'Detective: A Modern Crime Board Game\' as a case study, we show how hybridity in board games creates differences in distance levels and how changes between these levels are most visible in analog-digital hybrid games. Distance levels are useful for scholars and critics aiming to analyze board games as well as for board game designers seeking to manipulate players\' distance from in-game characters.'
 		},
 		{
 			id: 'shoelace',
@@ -106,25 +107,41 @@
 </script>
 
 <section class="publications">
-	<h1 class="h1">Publications</h1>
-	{#each publications as publication}
-		<div class="list-dl">
-			<div class="article">
-				<span class="flex-auto">
-					<dt><h4 class="h4">{publication.name}</h4></dt>
-					<dd>{publication.authors}</dd>
-					<dd>
-						<em>{publication.venue}</em>, {publication.year}
-					</dd>
+	<h2 class="h2 section-title">Publications</h2>
+	<ol class="flex flex-col gap-4">
+		{#each publications as publication (publication.id)}
+			<li class="card flex flex-col gap-4 p-5 sm:flex-row sm:gap-6">
+				<div class="shrink-0">
+					<span class="badge variant-soft-primary font-heading-token text-sm">{publication.year}</span>
+				</div>
+				<div class="flex min-w-0 flex-1 flex-col gap-1.5">
+					<h3 class="h4 font-semibold leading-snug">
+						<a href={publication.url} target="_blank" rel="noopener" class="hover:text-primary-500 transition-colors">{publication.name}</a>
+					</h3>
+					<p class="muted text-sm">
+						{#each publication.authors.split(ME) as part, i}{#if i > 0}<strong>{ME}</strong>{/if}{part}{/each}
+					</p>
+					<p class="text-sm"><em>{publication.venue}</em></p>
 					{#if publication.award}
-						<strong>{publication.award}</strong>
+						<div>
+							<span class="badge variant-filled-warning mt-1"><i class="fa-solid fa-trophy" aria-hidden="true"></i><span>{publication.award}</span></span>
+						</div>
 					{/if}
-					<dd></dd>
-				</span>
-				<span>
-					<a href="{publication.url}" target="blank" type="button" class="btn-icon variant-filled"><span><i class="fa-regular fa-file-pdf"></i></span></a>
-				</span>
-			</div>
-		</div>
-	{/each}
+					{#if publication.abstract}
+						<details class="group mt-1 text-sm">
+							<summary class="cursor-pointer select-none font-semibold text-primary-600 dark:text-primary-400">
+								<span class="group-open:hidden">Show abstract</span><span class="hidden group-open:inline">Hide abstract</span>
+							</summary>
+							<p class="muted mt-2 leading-relaxed">{publication.abstract}</p>
+						</details>
+					{/if}
+				</div>
+				<div class="shrink-0 self-start">
+					<a href={publication.url} target="_blank" rel="noopener" class="btn btn-sm variant-ghost-primary" aria-label="Open paper: {publication.name}">
+						<i class="fa-regular fa-file-pdf" aria-hidden="true"></i><span>Paper</span>
+					</a>
+				</div>
+			</li>
+		{/each}
+	</ol>
 </section>

@@ -1,15 +1,11 @@
 <script>
-	import Footer from '../footer.svelte';
-	import Header from '../header.svelte';
+	import CaseStudy from '$lib/CaseStudy.svelte';
 </script>
 
-<Header />
-<section class="projectpage mx-28 2xl:mx-96 my-20">
-	<div>
-		<h1 class="h1">Prototyping a Game Master Digital Assistant</h1>
-		<h5 class="h5">Researching how we can design computational tools to help support game masters running tabletop roleplaying games.</h5>
-	</div>
-
+<CaseStudy
+	title="Prototyping a Game Master Digital Assistant"
+	subtitle="Researching how we can design computational tools to help support game masters running tabletop roleplaying games."
+	image="/img/ttrpg2.png">
 	<p>
 		As part of my Master's thesis, I interviewed game masters (GMs) of tabletop roleplaying games (TTRPGs) about their process preparing for and running their games, with a focus on how they
 		facilitate collaborative storytelling. I was interested in better understanding the GMing process in order to help inform the creation of computational tools to help support GMs running TTRPGs.
@@ -34,7 +30,7 @@
 	</p>
 
 	<figure>
-		<img src="img/image7.png" alt="A section of the handmade graph detailing module information" />
+		<img src="/img/image7.png" alt="A section of the handmade graph detailing module information" />
 		<figcaption>A section of the handmade graph detailing module information in <em>Lost Mine</em></figcaption>
 	</figure>
 	<p>
@@ -94,7 +90,7 @@
 		and make each type more visually distinct. The visualization for the above code can be seen here:
 	</p>
 	<figure>
-		<img src="img/image4.png" alt="A sample visualization of the connections between locations, characters, and information" />
+		<img src="/img/image4.png" alt="A sample visualization of the connections between locations, characters, and information" />
 		<figcaption>A sample visualization of the connections between locations, characters, and information</figcaption>
 	</figure>
 	<p>
@@ -104,7 +100,7 @@
 		expanded version here:
 	</p>
 	<figure>
-		<img src="img/image1.png" alt="A section of the expanded knowledge visualization" />
+		<img src="/img/image1.png" alt="A section of the expanded knowledge visualization" />
 		<figcaption>A section of the expanded knowledge visualization</figcaption>
 	</figure>
 	<p>
@@ -114,7 +110,7 @@
 		threads). You can see the condensed version here:
 	</p>
 	<figure>
-		<img src="img/image8.png" alt="A section of the condensed knowledge visualization and key" />
+		<img src="/img/image8.png" alt="A section of the condensed knowledge visualization and key" />
 		<figcaption>A section of the condensed knowledge visualization and key</figcaption>
 	</figure>
 	<p>
@@ -125,7 +121,7 @@
 		changes to the graph depending on what happens during play.
 	</p>
 	<figure>
-		<img src="img/image5.gif" alt="A section of the interactive version of the condensed knowledge visualization" />
+		<img src="/img/image5.gif" alt="A section of the interactive version of the condensed knowledge visualization" />
 		<figcaption>A section of the interactive version of the condensed knowledge visualization</figcaption>
 	</figure>
 	<p>
@@ -195,7 +191,7 @@
 		information in a table like so:
 	</p>
 	<figure>
-		<img src="img/image6.png" alt="a list of locations" />
+		<img src="/img/image6.png" alt="a list of locations" />
 		<figcaption>A list of locations in <em>Lost Mine of Phandelver</em></figcaption>
 	</figure>
 	<p>
@@ -223,7 +219,7 @@
 		character/location/etc. Then when the user edits and submits that form, the new entry is added to the database.
 	</p>
 	<figure>
-		<img src="img/image3.png" alt="Conditional page with form for adding a new conditional" />
+		<img src="/img/image3.png" alt="Conditional page with form for adding a new conditional" />
 		<figcaption>Conditional page with form for adding a new conditional</figcaption>
 	</figure>
 	<p>
@@ -233,7 +229,7 @@
 		the table, highlighting the tag in yellow so it is easy to spot.
 	</p>
 	<figure>
-		<img src="img/image2.gif" alt="GIF of clicking a hyperlink" />
+		<img src="/img/image2.gif" alt="GIF of clicking a hyperlink" />
 		<figcaption>GIF of clicking a hyperlink</figcaption>
 	</figure>
 	<p>
@@ -248,11 +244,11 @@
 		for GMs to use on the fly, create better visualizations for what has already happened in the game world such as a log of player actions, and provide creative suggestions for what can happen next
 		in the game world as a creative support tool for new GMs.
 	</p>
-	<section class="grid grid-cols-1 lg:grid-cols-2 gap-8 project-button-container">
+	<div class="my-8 flex flex-wrap justify-center gap-4">
 		<a type="button" class="btn btn-lg variant-filled-primary" href="https://github.com/devibri/PhandelverProlog"><span><i class="fa-brands fa-github"></i></span><span>"Lost Mines" Github</span></a>
 		<a type="button" class="btn btn-lg variant-filled-primary" href="https://devibri.github.io/PhandelverProlog/index.html"
 			><span><i class="fa-solid fa-play"></i></span><span>"Lost Mines" Demo</span></a>
-	</section>
+	</div>
 	<h2 class="h2">Part 2: "Fatal Frequencies"</h2>
 	<p>
 		Following this development work for "Lost Mine of Phandelver," I wanted to further explore how we can create different tools for GM assistants for TTRPGs. Because of the large possibility space of
@@ -268,7 +264,7 @@
 		leads to new undiscovered scenes.
 	</p>
 	<figure>
-		<img src="img/ttrpg3.png" alt="frontend for Fatal Frequencies" />
+		<img src="/img/ttrpg3.png" alt="frontend for Fatal Frequencies" />
 		<figcaption>An image of the frontend for "Fatal Frequencies"</figcaption>
 	</figure>
 	<p>
@@ -277,12 +273,11 @@
 		providing a list of characters that the player is friendly with as their relationship with other characters changes over time.
 	</p>
 	<p>More about how this system works and future work for this project can be found in the paper linked below.</p>
-	<section class="grid grid-cols-1 min-[1900px]:grid-cols-3 gap-8 project-button-container">
-		<a type="button" class="btn btn-lg variant-filled-primary" href="papers/Shoelace_FDG23.pdf"><span><i class="fa-regular fa-file-lines"></i></span><span>Read the paper</span></a>
+	<svelte:fragment slot="actions">
+		<a type="button" class="btn btn-lg variant-filled-primary" href="/papers/Shoelace_FDG23.pdf"><span><i class="fa-regular fa-file-lines"></i></span><span>Read the paper</span></a>
 		<a type="button" class="btn btn-lg variant-filled-primary" href="https://github.com/devibri/FatalFrequenciesFrontend"
 			><span><i class="fa-brands fa-github"></i></span><span>"Fatal Frequencies" Github</span></a>
 		<a type="button" class="btn btn-lg variant-filled-primary" href="https://devibri.github.io/FatalFrequenciesFrontend/"
 			><span><i class="fa-solid fa-play"></i></span><span>"Fatal Frequencies" Demo</span></a>
-	</section>
-</section>
-<Footer />
+	</svelte:fragment>
+</CaseStudy>

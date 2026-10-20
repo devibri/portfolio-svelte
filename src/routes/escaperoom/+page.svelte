@@ -1,22 +1,19 @@
 <script>
-	import Footer from '../footer.svelte';
-	import Header from '../header.svelte';
+	import CaseStudy from '$lib/CaseStudy.svelte';
 </script>
 
-<Header />
-
-<section class="projectpage mx-28 2xl:mx-96 my-20">
-	<h1 class="h1">Science Internship Program: Virtual Reality / Physical Escape Room</h1>
-	<h5 class="h5">Researching how to create different collaborative dynamics in escape rooms through designing a combined physical and virtual escape room</h5>
-
-	<p>
+<CaseStudy
+	title="Science Internship Program: Virtual Reality / Physical Escape Room"
+	subtitle="Researching how to create different collaborative dynamics in escape rooms through designing a combined physical and virtual escape room"
+	image="/img/escape.png"
+	><p>
 		I co-mentored a summer-long research project as part of the UCSC Science Internship Program. I, a fellow graduate student mentor, and a team of four high school students worked together on
 		creating an escape room that mixed virtual reality (VR) and physical space. In this escape room, two participants are placed in the same room but one participant wears a VR head-mounted display
 		(HMD) and thus can only see and interact with objects in the virtual space. The other participant can only see and interact with objects in the physical space. The players must work together with
 		asymmetric information to solve puzzles and escape the room as a team.
 	</p>
 
-	<h2 class="h2 pageheading">Background</h2>
+	<h2 class="h2">Background</h2>
 	<p>
 		We began this project by looking at existing literature on escape rooms and cooperative play. We were particularly interested in the affordances of escape rooms and design in this space, as well
 		as the overlap between physical and digital spaces in games. Part of the reason we settled on creating an escape room that mixed physical and virtual reality was a practical one--our high school
@@ -35,7 +32,7 @@
 		escape room that mixed players in physical and VR spaces.
 	</p>
 
-	<h2 class="h2 pageheading">The design of the escape room</h2>
+	<h2 class="h2">The design of the escape room</h2>
 	<p>
 		The escape room was designed and assembled in UCSC’s user testing lab using Unity for development, an HTC Vive for development and testing, and a BreakoutEDU kit that provides various adjustable
 		locks and boxes. We began creating the VR portion of the escape room in Unity by measuring out the size of the user testing lab and the large furniture in that space that we would be using for the
@@ -45,7 +42,7 @@
 	</p>
 	<h3 class="h3 pageheading">The puzzles</h3>
 	<figure>
-		<img src="img/image13.png" alt="A side-by-side view of the virtual and physical spaces" />
+		<img src="/img/image13.png" alt="A side-by-side view of the virtual and physical spaces" />
 		<figcaption>A side-by-side view of the virtual and physical spaces</figcaption>
 	</figure>
 	<p>
@@ -82,22 +79,22 @@
 
 	<figure>
 		<img
-			src="img/image9.png"
+			src="/img/image9.png"
 			alt="View of the maze puzzle, with the top being the full view of the maze, the left being what the player in physical space sees, and the right being what the person in VR sees" />
 		<figcaption>
 			View of the maze puzzle, with the top being the full view of the maze, the left being what the player in physical space sees, and the right being what the person in VR sees
 		</figcaption>
 	</figure>
 	<figure>
-		<img src="img/image5.png" alt="View of the text puzzle, where both participants have different parts of a code used to open a locked box" />
+		<img src="/img/image5.png" alt="View of the text puzzle, where both participants have different parts of a code used to open a locked box" />
 		<figcaption>View of the text puzzle, where both participants have different parts of a code used to open a locked box</figcaption>
 	</figure>
 	<figure>
-		<img src="img/image11.png" alt="View of the cube puzzle, including the inside of the unlocked box (far left), physical player’s hints (top row), and the cube seen in VR (bottom row)" />
+		<img src="/img/image11.png" alt="View of the cube puzzle, including the inside of the unlocked box (far left), physical player’s hints (top row), and the cube seen in VR (bottom row)" />
 		<figcaption>View of the cube puzzle, including the inside of the unlocked box (far left), physical player’s hints (top row), and the cube seen in VR (bottom row)</figcaption>
 	</figure>
 	<figure>
-		<img src="img/image10.png" alt="View of the light puzzle, with the various colors of lights flashing in the physical and virtual rooms" />
+		<img src="/img/image10.png" alt="View of the light puzzle, with the various colors of lights flashing in the physical and virtual rooms" />
 		<figcaption>View of the light puzzle, with the various colors of lights flashing in the physical and virtual rooms</figcaption>
 	</figure>
 
@@ -129,7 +126,7 @@
 		</li>
 	</ul>
 
-	<h2 class="h2 pageheading">Reflection</h2>
+	<h2 class="h2">Reflection</h2>
 
 	<p>
 		The main goal of this project was to explore the design of a co-located escape room that mixed virtual reality and physical space. One of the issues with existing escape rooms that we wanted to
@@ -156,7 +153,7 @@
 		as having one player have to physically guide the other player through the space. I hope to further explore these aspects of escape rooms in future work.
 	</p>
 
-	<h2 class="h2 pageheading">Works Cited</h2>
+	<h2 class="h2">Works Cited</h2>
 	<ul>
 		<li>
 			Nicholson, S. (2016a). Ask why: Creating a better player experience through environmental storytelling and consistency in escape room design. Meaningful Play. Retrieved from
@@ -181,10 +178,7 @@
 			‘escape room’ experience. Cureus, 10(3).
 		</li>
 	</ul>
-	<section class="grid grid-cols-1 lg:grid-cols-3 gap-8 project-button-container">
-		<span></span>
+	<svelte:fragment slot="actions">
 		<a type="button" class="btn btn-lg variant-filled-primary" href="https://github.com/devibri/SIP-Unity-Escape-Room"><span><i class="fa-brands fa-github"></i></span><span>Project Github</span></a>
-		<span></span>
-	</section>
-</section>
-<Footer />
+	</svelte:fragment>
+</CaseStudy>
