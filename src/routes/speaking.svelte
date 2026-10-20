@@ -40,7 +40,7 @@
 </script>
 
 <section class="speaking">
-	<h2 class="h2 section-title">Speaking &amp; Mentorship</h2>
+	<h2 class="h2 section-title">Speaking + Mentorship</h2>
 	<ol class="relative ml-2 border-l-2 border-primary-500/30">
 		{#each engagements as engagement}
 			<li class="relative mb-8 pl-8 last:mb-0">

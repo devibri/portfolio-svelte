@@ -16,7 +16,7 @@
 			<strong>Devi Acharya</strong>
 			<span class="hidden items-center gap-2 sm:inline-flex">
 				<span class="opacity-40">|</span>
-				<Gears /> AI + Games
+				<span class="text-primary-500"><Gears /></span> AI + Games
 			</span>
 		</a>
 
