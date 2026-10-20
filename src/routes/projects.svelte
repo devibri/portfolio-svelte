@@ -1,4 +1,15 @@
 <script lang="ts">
+	import { onMount, tick } from 'svelte';
+	import { flip } from 'svelte/animate';
+	import { scale } from 'svelte/transition';
+	import { cubicOut } from 'svelte/easing';
+
+	// Cards glide to their new grid slots when the filter changes; motion is skipped for reduced-motion users
+	let motion = 1;
+	onMount(() => {
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) motion = 0;
+	});
+
 	type ProjectLink = {
 		label: string;
 		href: string;
@@ -34,6 +45,17 @@
 	];
 
 	let activeFilter: Filter = 'all';
+	let grid: HTMLElement;
+
+	// The flip animation measures cards while old ones are removed and before new ones are added,
+	// so the page briefly shrinks and the browser clamps the scroll position. Hold the grid's
+	// height until the new cards are in place.
+	async function setFilter(filter: Filter) {
+		grid.style.minHeight = `${grid.offsetHeight}px`;
+		activeFilter = filter;
+		await tick();
+		grid.style.minHeight = '';
+	}
 
 	const projects = [
 		{
@@ -255,16 +277,19 @@
 					class:variant-filled-primary={activeFilter === filter.id}
 					class:variant-soft={activeFilter !== filter.id}
 					aria-pressed={activeFilter === filter.id}
-					on:click={() => (activeFilter = filter.id)}>
+					on:click={() => setFilter(filter.id)}>
 					{filter.label}
 				</button>
 			{/each}
 		</div>
 	</div>
 
-	<div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+	<div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3" bind:this={grid}>
 		{#each filteredProjects as project (project.id)}
-			<article class="card card-hover group flex flex-col overflow-hidden">
+			<article
+				class="card card-hover group flex flex-col overflow-hidden"
+				animate:flip={{ duration: 450 * motion, easing: cubicOut }}
+				in:scale={{ start: 0.92, duration: 300 * motion, delay: 200 * motion, easing: cubicOut }}>
 				<a href={project.page ?? getProjectLinks(project)[0]?.href} class="block overflow-hidden" tabindex="-1" aria-hidden="true">
 					<img src="/img/{project.slug}" class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none" alt="" loading="lazy" />
 				</a>

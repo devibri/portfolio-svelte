@@ -79,7 +79,7 @@
 
 <section class="speaking">
 	<h2 class="h2 section-title">Speaking + Mentorship</h2>
-	<div class="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] 2xl:grid-cols-[minmax(0,1fr)_minmax(0,36rem)]">
+	<div class="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,28rem)_minmax(0,1fr)] 2xl:grid-cols-[minmax(0,36rem)_minmax(0,1fr)]">
 		<ol class="relative ml-2 border-l-2 border-primary-500/30">
 			{#each engagements as engagement}
 				<li class="relative mb-8 pl-8 last:mb-0">
@@ -92,7 +92,7 @@
 				</li>
 			{/each}
 		</ol>
-		<div class="lg:sticky lg:top-24 lg:self-start">
+		<div class="order-first lg:sticky lg:top-24 lg:self-start">
 			<Carousel slides={photos} label="Speaking and mentorship photos" />
 		</div>
 	</div>

@@ -7,7 +7,8 @@
 
 	const sections = [
 		{ id: 'projects', label: 'Projects' },
-		{ id: 'publications', label: 'Publications + Speaking' }
+		{ id: 'publications', label: 'Publications' },
+		{ id: 'speaking', label: 'Speaking + Mentorship' }
 	] as const;
 
 	type SectionId = (typeof sections)[number]['id'];
@@ -68,9 +69,9 @@
 			<div class="section-pane" role="tabpanel" id="panel-{section.id}" aria-labelledby="tab-{section.id}" in:wipe={{ outgoing: false }} out:wipe={{ outgoing: true }}>
 				{#if section.id === 'projects'}
 					<Projects />
-				{:else}
+				{:else if section.id === 'publications'}
 					<Publications />
-					<div class="section-divider mb-12" aria-hidden="true"></div>
+				{:else}
 					<Speaking />
 				{/if}
 			</div>

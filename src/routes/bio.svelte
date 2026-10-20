@@ -9,7 +9,8 @@
 	const contacts = [
 		{ label: 'Email me', href: 'mailto:devi@devi.rocks', icon: 'fa-solid fa-envelope' },
 		{ label: 'LinkedIn', href: 'https://linkedin.com/in/dacharya/', icon: 'fa-brands fa-linkedin' },
-		{ label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=cfJU7JgAAAAJ&hl=en', icon: 'fa-brands fa-google-scholar' }
+		{ label: 'GitHub', href: 'https://github.com/devibri', icon: 'fa-brands fa-github' },
+		// { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=cfJU7JgAAAAJ&hl=en', icon: 'fa-brands fa-google-scholar' }
 	];
 </script>
 
