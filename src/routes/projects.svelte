@@ -49,7 +49,7 @@
 
 	// The flip animation measures cards while old ones are removed and before new ones are added,
 	// so the page briefly shrinks and the browser clamps the scroll position. Hold the grid's
-	// height until the new cards are in place.
+	// height until the new cards are in place; content-start keeps the rows from stretching to fill it.
 	async function setFilter(filter: Filter) {
 		grid.style.minHeight = `${grid.offsetHeight}px`;
 		activeFilter = filter;
@@ -284,7 +284,7 @@
 		</div>
 	</div>
 
-	<div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3" bind:this={grid}>
+	<div class="grid grid-cols-1 content-start gap-8 md:grid-cols-2 xl:grid-cols-3" bind:this={grid}>
 		{#each filteredProjects as project (project.id)}
 			<article
 				class="card card-hover group flex flex-col overflow-hidden"
