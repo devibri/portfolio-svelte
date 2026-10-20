@@ -29,7 +29,7 @@
 						</a>
 					</li>
 				{/each}
-				<li><LightSwitch /></li>
+				<li><LightSwitch class="dark:!bg-surface-600" ring="ring-[1px] ring-surface-500/30 dark:ring-surface-300" /></li>
 			</ul>
 		</nav>
 	</div>

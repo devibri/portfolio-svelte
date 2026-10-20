@@ -25,8 +25,7 @@
 			Hi, I'm <strong>Devi Acharya</strong>
 		</h1>
 		<p class="text-lg leading-relaxed md:text-xl">
-			I develop applied AI tools for game studios to help accelerate design and development as a part of Take-Two Interactive's AI team. I'm experienced working with client teams to understand their
-			needs and build tools and prototypes to support them, ranging from procedural content generators with LLM integration to Unity games and full-stack web applications.
+			I'm a software engineer building applied AI tools at Take-Two and Zynga for game teams, from procedural level generators to experimental playable ads. If you're looking for someone to build AI support tools to empower creative teams, <a href="mailto:devi@devi.rocks" class="text-primary-500 hover:underline">let's chat</a>. 
 		</p>
 
 		<ul class="muted flex flex-col gap-1 text-sm md:text-base">
