@@ -13,6 +13,12 @@
 			date: 'March 2026'
 		},
 		{
+			role: 'Industry Mentor',
+			event: 'Industry Review - Game Design',
+			host: 'Champlain College',
+			date: 'Oct - Nov 2025'
+		},
+		{
 			role: 'Roundtable Speaker',
 			event: 'Women in Games - Get in the Game',
 			host: 'Strong Museum of Play',
@@ -21,7 +27,7 @@
 		{
 			role: 'Mentor',
 			event: 'Zynga x North Carolina A&T Mentorship Program',
-			host: 'North Carolina State University',
+			host: 'North Carolina A&T State University',
 			date: 'Sept 2024 - May 2025'
 		},
 		{

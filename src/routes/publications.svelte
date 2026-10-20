@@ -9,7 +9,7 @@
 			venue: 'PAIDIA Special Edition - Monsters, Magic, Mediality',
 			year: '2024',
 			url: 'https://paidia.de/blood-on-whose-hands/',
-			abstract: 'This paper proposes a theoretical framework called “distance levels” for analyzing the shifting relationships between players and in-game characters in board games.'
+			abstract: 'This paper proposes a theoretical framework called “distance levels” for analyzing the shifting relationships between players and in-game characters in board games. It builds on Britta Neitzel\'s Points of Action, originally used to examine digital avatars, and Erving Goffman\'s concept of role distance. Using the board game \'Detective: A Modern Crime Board Game\' as a case study, we show how hybridity in board games creates differences in distance levels and how changes between these levels are most visible in analog-digital hybrid games. Distance levels are useful for scholars and critics aiming to analyze board games as well as for board game designers seeking to manipulate players\' distance from in-game characters.'
 		},
 		{
 			id: 'shoelace',
