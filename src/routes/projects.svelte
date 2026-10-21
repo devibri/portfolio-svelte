@@ -1,14 +1,16 @@
+<script context="module" lang="ts">
+	export type Filter = 'all' | 'tools' | 'games';
+</script>
+
 <script lang="ts">
-	import { onMount, tick } from 'svelte';
+	import { tick } from 'svelte';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 
-	// Cards glide to their new grid slots when the filter changes; motion is skipped for reduced-motion users
-	let motion = 1;
-	onMount(() => {
-		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) motion = 0;
-	});
+	// Cards glide to their new grid slots when a filter is clicked. Filters set from the URL apply
+	// instantly, and motion is skipped for reduced-motion users.
+	let motion = 0;
 
 	type ProjectLink = {
 		label: string;
@@ -16,7 +18,6 @@
 		external: boolean;
 	};
 
-	type Filter = 'all' | 'tools' | 'games';
 
 	function getProjectLinks(project: { urls?: Array<Record<string, string | undefined>>; url?: string; page?: string }): ProjectLink[] {
 		const links: ProjectLink[] = [];
@@ -44,13 +45,14 @@
 		{ id: 'games', label: 'Games' }
 	];
 
-	let activeFilter: Filter = 'all';
+	export let activeFilter: Filter = 'all';
 	let grid: HTMLElement;
 
 	// The flip animation measures cards while old ones are removed and before new ones are added,
 	// so the page briefly shrinks and the browser clamps the scroll position. Hold the grid's
 	// height until the new cards are in place; content-start keeps the rows from stretching to fill it.
 	async function setFilter(filter: Filter) {
+		motion = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 1;
 		grid.style.minHeight = `${grid.offsetHeight}px`;
 		activeFilter = filter;
 		await tick();

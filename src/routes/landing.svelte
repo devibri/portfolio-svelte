@@ -1,9 +1,12 @@
 <script lang="ts">
 	import Publications from './publications.svelte';
-	import Projects from './projects.svelte';
+	import Projects, { type Filter } from './projects.svelte';
 	import Bio from './bio.svelte';
 	import Speaking from './speaking.svelte';
 	import { cubicInOut } from 'svelte/easing';
+	import { tick } from 'svelte';
+	import { afterNavigate, replaceState } from '$app/navigation';
+	import { page } from '$app/stores';
 
 	const sections = [
 		{ id: 'projects', label: 'Projects' },
@@ -12,10 +15,60 @@
 	] as const;
 
 	type SectionId = (typeof sections)[number]['id'];
+	type View = { section: SectionId; filter?: Filter };
 
-	let activeSection: SectionId = 'projects';
+	// Paths that open a section or project filter directly, e.g. /games or /publications.
+	// The route only matches names listed in src/params/view.ts.
+	const viewTargets: Record<string, View> = {
+		projects: { section: 'projects', filter: 'all' },
+		ai: { section: 'projects', filter: 'tools' },
+		tools: { section: 'projects', filter: 'tools' },
+		games: { section: 'projects', filter: 'games' },
+		publications: { section: 'publications' },
+		speaking: { section: 'speaking' }
+	};
+
+	function pathFor(section: SectionId, filter: Filter) {
+		if (section !== 'projects') return `/${section}`;
+		return filter === 'tools' ? '/ai' : filter === 'games' ? '/games' : '/projects';
+	}
+
+	// Rendered straight from the URL, so the server sends the right section and filter
+	const initial = viewTargets[$page.params.view ?? ''];
+	let activeSection: SectionId = initial?.section ?? 'projects';
+	let projectFilter: Filter = initial?.filter ?? 'all';
 	// 1 = wipe left (moving forward), -1 = wipe right (moving back)
 	let direction = 1;
+	// Off until the first navigation finishes so the page doesn't wipe in on load
+	let animate = false;
+	let tabs: HTMLElement;
+	// The view as of the last URL sync, so the URL only changes when the visitor changes the view
+	let syncedPath = pathFor(activeSection, projectFilter);
+
+	// Runs on load and on links or back/forward between views; scroll to the tabs when the URL names one
+	afterNavigate(async ({ type }) => {
+		const target = viewTargets[$page.params.view ?? ''];
+		if (type !== 'enter') {
+			selectSection(target?.section ?? 'projects');
+			projectFilter = target?.filter ?? 'all';
+			syncedPath = pathFor(activeSection, projectFilter);
+		}
+		if (target) {
+			await tick();
+			tabs.scrollIntoView({ behavior: animate ? 'smooth' : 'instant', block: 'start' });
+		}
+		animate = true;
+	});
+
+	// Keep the URL in step with what's shown so it can be copied and shared, without adding
+	// history entries or scrolling
+	$: if (animate) {
+		const path = pathFor(activeSection, projectFilter);
+		if (path !== syncedPath) {
+			syncedPath = path;
+			replaceState(path, {});
+		}
+	}
 
 	function selectSection(id: SectionId) {
 		if (id === activeSection) return;
@@ -31,7 +84,7 @@
 	function wipe(node: Element, { outgoing }: { outgoing: boolean }) {
 		const dir = direction;
 		return {
-			duration: prefersReducedMotion() ? 0 : 550,
+			duration: !animate || prefersReducedMotion() ? 0 : 550,
 			easing: cubicInOut,
 			css: (t: number, u: number) => {
 				const edge = outgoing ? u : 1 - u;
@@ -45,7 +98,7 @@
 
 <Bio />
 <div class="section-divider" aria-hidden="true"></div>
-<div class="my-10 flex justify-center">
+<div class="my-10 flex scroll-mt-24 justify-center" bind:this={tabs}>
 	<div class="flex flex-wrap justify-center gap-3" role="tablist" aria-label="Show projects or publications">
 		{#each sections as section}
 			<button
@@ -68,7 +121,7 @@
 		{#if activeSection === section.id}
 			<div class="section-pane" role="tabpanel" id="panel-{section.id}" aria-labelledby="tab-{section.id}" in:wipe={{ outgoing: false }} out:wipe={{ outgoing: true }}>
 				{#if section.id === 'projects'}
-					<Projects />
+					<Projects bind:activeFilter={projectFilter} />
 				{:else if section.id === 'publications'}
 					<Publications />
 				{:else}
