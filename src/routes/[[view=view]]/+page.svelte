@@ -1,5 +1,5 @@
 <script>
-	import Landing from './landing.svelte';
+	import Landing from '../landing.svelte';
 
 	const description = 'Devi Acharya builds applied AI tools for game studios, from procedural content generators with LLM integration to Unity games and full-stack web apps.';
 </script>
