@@ -51,6 +51,12 @@
 			date: 'Sept 2024 - May 2025'
 		},
 		{
+			role: 'Speaker',
+			event: 'Take-Two Tech Talk Series - Storylets for Personalized Narrative Ads',
+			host: 'Take-Two',
+			date: '2024'
+		},
+		{
 			role: 'Panelist',
 			event: 'Storytelling and Roleplaying Games',
 			date: '2021',
