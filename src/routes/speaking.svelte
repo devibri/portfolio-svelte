@@ -1,23 +1,24 @@
 <script>
 	import Carousel from '$lib/Carousel.svelte';
 
-	const photos = [
-		{
-			src: '/img/carousel/path.jpg',
-			alt: 'Devi speaking at a podium in front of a slide titled "Finding Your Path"',
-			caption: 'Women in Games - Get in the Game, Strong Museum of Play'
-		},
-		{
-			src: '/img/carousel/nc_state.jpg',
-			alt: 'Four panelists seated on stage in front of an audience',
-			caption: 'Pathways After a Degree in Film, Games & Media Studies, NC State'
-		},
-		{
-			src: '/img/carousel/nc_state_poster.jpg',
-			alt: 'Event poster for "Pathways After a Degree in Film, Games & Media Studies" listing Devi Acharya as a speaker',
-			caption: 'Pathways After a Degree in Film, Games & Media Studies, NC State'
-		}
-	];
+	// Every image in $lib/img/carousel is shown; add alt text here by filename.
+	const images = import.meta.glob('$lib/img/carousel/*.{jpg,jpeg,png,webp,gif}', {
+		eager: true,
+		import: 'default'
+	});
+
+	/** @type {Record<string, string>} */
+	const altText = {
+		'path.jpg': 'Devi speaking at a podium in front of a slide titled "Finding Your Path"',
+		'nc_state.jpg': 'Four panelists seated on stage in front of an audience',
+		'nc_state_poster.jpg':
+			'Event poster for "Pathways After a Degree in Film, Games & Media Studies" listing Devi Acharya as a speaker'
+	};
+
+	const photos = Object.entries(images).map(([path, src]) => {
+		const file = path.slice(path.lastIndexOf('/') + 1);
+		return { src: /** @type {string} */ (src), alt: altText[file] ?? '' };
+	});
 
 	const engagements = [
 		{
